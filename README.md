@@ -57,7 +57,12 @@ docker network ls
 docker container ls 
 docker container ls -all
 ```
+## Delete all running and stopped containers
+```
+docker container rm -f $(docker ps -aq) 
+```
+## Print the last 100  lines of a container’s logs 
+```
+docker container logs --tail 100 web
+```
 
-
-
-Delete all running and stopped containers docker container rm -f $(docker ps -aq) Print the last 100  lines of a container’s logs docker container logs --tail 100 web
